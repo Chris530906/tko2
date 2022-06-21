@@ -1,5 +1,5 @@
 spec_version: 2
-description: Auto generated blueprint for terraform module ex6
+description: Custom BP ex 7 and 6
 # blueprint inputs can be provided by the user, API or CI plugin when creating an environment from this blueprint.
 # inputs:
 #   host_name:
