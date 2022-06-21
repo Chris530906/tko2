@@ -18,7 +18,7 @@ grains:
     kind: terraform
     spec:
       source:
-        store: tko
+        store: tko2auto
         path: ex6
       host:
       # Execution Host - the platform where the asset executable will run.
@@ -37,7 +37,7 @@ grains:
     depends-on: ex6
     spec:
       source:
-        store: tko
+        store: tko2auto
         path: ex7
       host:
       # Execution Host - the platform where the asset executable will run.
