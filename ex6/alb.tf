@@ -23,7 +23,7 @@ resource "aws_security_group" "alb" {
 }
 
 resource "aws_alb" "alb" {
-  name            = "alb-cfox"
+  name            = "${random_string.random.result}-alb-cfox"
   security_groups = ["${aws_security_group.alb.id}"]
   subnets         = [aws_subnet.public-sub-1.id, aws_subnet.public-sub-2.id]
   tags = {
@@ -43,7 +43,7 @@ resource "aws_alb_listener" "listener_http" {
 }
 
 resource "aws_alb_target_group" "group" {
-  name     = "terraform-example-alb-target"
+  name     = "${random_string.random.result}-alb-target"
   port     = 8080
   protocol = "HTTP"
   vpc_id   = "${aws_vpc.vpc.id}"
